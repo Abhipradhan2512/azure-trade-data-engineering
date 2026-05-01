@@ -9,7 +9,7 @@ It uses:
 - **Comtrade API dataset (global trade data)**
 
 The pipeline is designed to ingest, clean, transform, and compare import/export trade data using **Azure Data Factory (ADF)** and **PySpark/Pandas**.
-![Architecture Diagram](images/architecture.png)
+![Architecture Diagram](Image/Architecture.jpg)    
 ---
 
 ## Problem Statement
