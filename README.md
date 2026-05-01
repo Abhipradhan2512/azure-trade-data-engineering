@@ -86,6 +86,7 @@ Data flows through the following stages:
 - Filters only newly added datasets
 - Handles file-based ingestion (XML/Excel)
 
+![Architecture Diagram](Image/pipeline.png)
 ---
 
 ### Step 2: Data Cleaning & Transformation (PySpark + Pandas)
