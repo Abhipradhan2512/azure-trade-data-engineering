@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "tradeprojectadf"
+        },
+        "adls_ls_1_accountKey": {
+            "value": ""
+        },
+        "adls_ls_connectionString": {
+            "value": ""
+        },
+        "MySql1_password": {
+            "value": ""
+        },
+        "ls_raw_accountKey": {
+            "value": ""
+        },
+        "ls_trade_nb_1_accessToken": {
+            "value": ""
+        },
+        "ls_json_accountKey": {
+            "value": ""
+        },
+        "ls_csv_accountKey": {
+            "value": ""
+        },
+        "delete2_accountKey": {
+            "value": ""
+        },
+        "adls_ls_1_properties_typeProperties_url": {
+            "value": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "MySql1_properties_typeProperties_server": {
+            "value": "njn3y3.h.filess.io"
+        },
+        "MySql1_properties_typeProperties_database": {
+            "value": "trade_etl_earliersee"
+        },
+        "MySql1_properties_typeProperties_username": {
+            "value": "trade_etl_earliersee"
+        },
+        "ls_raw_properties_typeProperties_url": {
+            "value": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "ls_trade_nb_1_properties_typeProperties_existingClusterId": {
+            "value": "0409-084413-48u8x2ps"
+        },
+        "ls_json_properties_typeProperties_url": {
+            "value": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "ls_csv_properties_typeProperties_url": {
+            "value": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "delete2_properties_typeProperties_url": {
+            "value": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "containerUri": {
+            "value": ""
+        },
+        "containerSasToken": {
+            "value": ""
+        }
+    }
+}

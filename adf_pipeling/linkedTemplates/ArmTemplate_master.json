@@ -1,0 +1,161 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "type": "string",
+            "metadata": "Data Factory name",
+            "defaultValue": "tradeprojectadf"
+        },
+        "adls_ls_1_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'adls_ls_1'"
+        },
+        "adls_ls_connectionString": {
+            "type": "secureString",
+            "metadata": "Secure string for 'connectionString' of 'adls_ls'"
+        },
+        "MySql1_password": {
+            "type": "secureString",
+            "metadata": "Secure string for 'password' of 'MySql1'"
+        },
+        "ls_raw_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'ls_raw'"
+        },
+        "ls_trade_nb_1_accessToken": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accessToken' of 'ls_trade_nb_1'"
+        },
+        "ls_json_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'ls_json'"
+        },
+        "ls_csv_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'ls_csv'"
+        },
+        "delete2_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'delete2'"
+        },
+        "adls_ls_1_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "MySql1_properties_typeProperties_server": {
+            "type": "string",
+            "defaultValue": "njn3y3.h.filess.io"
+        },
+        "MySql1_properties_typeProperties_database": {
+            "type": "string",
+            "defaultValue": "trade_etl_earliersee"
+        },
+        "MySql1_properties_typeProperties_username": {
+            "type": "string",
+            "defaultValue": "trade_etl_earliersee"
+        },
+        "ls_raw_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "ls_trade_nb_1_properties_typeProperties_existingClusterId": {
+            "type": "string",
+            "defaultValue": "0409-084413-48u8x2ps"
+        },
+        "ls_json_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "ls_csv_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "delete2_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://tradeprojectadls.dfs.core.windows.net/"
+        },
+        "containerUri": {
+            "type": "string",
+            "metadata": "URI to storage account containing linked ARM templates"
+        },
+        "containerSasToken": {
+            "type": "string",
+            "metadata": "Sas token to storage account containing linked ARM templates"
+        }
+    },
+    "variables": {
+        "factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+    },
+    "resources": [
+        {
+            "name": "tradeprojectadf_ArmTemplate_0",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2024-03-01",
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "factoryName": {
+                        "value": "[parameters('factoryName')]"
+                    },
+                    "adls_ls_1_accountKey": {
+                        "value": "[parameters('adls_ls_1_accountKey')]"
+                    },
+                    "adls_ls_connectionString": {
+                        "value": "[parameters('adls_ls_connectionString')]"
+                    },
+                    "MySql1_password": {
+                        "value": "[parameters('MySql1_password')]"
+                    },
+                    "ls_raw_accountKey": {
+                        "value": "[parameters('ls_raw_accountKey')]"
+                    },
+                    "ls_trade_nb_1_accessToken": {
+                        "value": "[parameters('ls_trade_nb_1_accessToken')]"
+                    },
+                    "ls_json_accountKey": {
+                        "value": "[parameters('ls_json_accountKey')]"
+                    },
+                    "ls_csv_accountKey": {
+                        "value": "[parameters('ls_csv_accountKey')]"
+                    },
+                    "delete2_accountKey": {
+                        "value": "[parameters('delete2_accountKey')]"
+                    },
+                    "adls_ls_1_properties_typeProperties_url": {
+                        "value": "[parameters('adls_ls_1_properties_typeProperties_url')]"
+                    },
+                    "MySql1_properties_typeProperties_server": {
+                        "value": "[parameters('MySql1_properties_typeProperties_server')]"
+                    },
+                    "MySql1_properties_typeProperties_database": {
+                        "value": "[parameters('MySql1_properties_typeProperties_database')]"
+                    },
+                    "MySql1_properties_typeProperties_username": {
+                        "value": "[parameters('MySql1_properties_typeProperties_username')]"
+                    },
+                    "ls_raw_properties_typeProperties_url": {
+                        "value": "[parameters('ls_raw_properties_typeProperties_url')]"
+                    },
+                    "ls_trade_nb_1_properties_typeProperties_existingClusterId": {
+                        "value": "[parameters('ls_trade_nb_1_properties_typeProperties_existingClusterId')]"
+                    },
+                    "ls_json_properties_typeProperties_url": {
+                        "value": "[parameters('ls_json_properties_typeProperties_url')]"
+                    },
+                    "ls_csv_properties_typeProperties_url": {
+                        "value": "[parameters('ls_csv_properties_typeProperties_url')]"
+                    },
+                    "delete2_properties_typeProperties_url": {
+                        "value": "[parameters('delete2_properties_typeProperties_url')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        }
+    ]
+}
